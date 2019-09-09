@@ -5,7 +5,6 @@ import {getData} from '../actions';
 import MainComponentData from './MainComponentData';
 
 const MainComponent = (props) => {
-    console.log(props);
     return ( 
         <div>
             <h1>Main Component</h1>
