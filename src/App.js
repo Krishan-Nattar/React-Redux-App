@@ -1,6 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {createStore, applyMiddleware, compose} from 'redux';
+import {Provider} from 'react-redux';
+import {reducer} from 'reducers';
+import thunk from 'react-redux';
+import MainComponent from './components/MainComponent';
 
 function App() {
   return (
