@@ -1,7 +1,8 @@
 import React from 'react';
 
 const MainComponentData = (props) => {
-    return ( <div>{props.ship}</div> );
+    console.log(props.article);
+    return ( <div>{props.article.title}</div> );
 }
  
 export default MainComponentData;
