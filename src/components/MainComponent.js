@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import Loader from 'react-loader-spinner';
 import {getData} from '../actions';
 import MainComponentData from './MainComponentData';
+import { Card, Input, Button } from 'semantic-ui-react';
 
 const MainComponent = (props) => {
 
@@ -15,9 +16,9 @@ const MainComponent = (props) => {
     return ( 
         <div>
             <h1>What would you like to know about?</h1>
-            <form>
-            <input type="text" value={search} onChange={searchBar}/>
-            <button onClick={(e)=>{
+            <form className="search-form">
+            <Input type="text" value={search} onChange={searchBar} placeholder="Search..."/>
+            <Button positive onClick={(e)=>{
               e.preventDefault();
               props.getData(search)
               setSearch("")
@@ -27,10 +28,12 @@ const MainComponent = (props) => {
         ) : (
           "Find News"
         )}
-      </button>
+      </Button>
       </form>
+      <Card.Group className="group">
       {props.data &&
         props.data.map(article => <MainComponentData key={article.url} article={article} />)}
+        </Card.Group>
         </div> 
     );
 }
