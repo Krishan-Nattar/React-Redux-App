@@ -3,8 +3,6 @@ import {Card, Image, Icon} from 'semantic-ui-react';
 
 const MainComponentData = (props) => {
     return ( 
-    
-    
         <Card>
         <Image src={props.article.urlToImage} wrapped ui={false} />
         <Card.Content>
@@ -23,8 +21,6 @@ const MainComponentData = (props) => {
           </a>
         </Card.Content>
       </Card>
-      
-    
      );
 }
  
