@@ -2,9 +2,10 @@ import React from 'react';
 import {connect} from 'react-redux'
 import Loader from 'react-loader-spinner';
 import {getData} from '../actions';
+import MainComponentData from './MainComponentData';
 
 const MainComponent = (props) => {
-    console.log(props.data);
+    console.log(props);
     return ( 
         <div>
             <h1>Main Component</h1>
@@ -15,8 +16,8 @@ const MainComponent = (props) => {
           "Get Main Data"
         )}
       </button>
-      {/* {props.webcams &&
-        props.webcams.map(cam => <Webcam key={cam} webcam={cam} />)} */}
+      {props.data &&
+        props.data.map(ship => <MainComponentData key={ship} ship={ship} />)}
         </div> 
     );
 }
